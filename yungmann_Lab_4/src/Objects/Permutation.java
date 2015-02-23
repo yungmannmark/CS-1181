@@ -107,13 +107,15 @@ public class Permutation<T> {
 
     } //End Generic array constructor
 
-    public T[] permutator(int i, int n) {
+    public Permutation [] permutator(int i, int n) {
+        Permutation [] arrayOfPermutations = new Permutation [1];
+        
+        arrayOfPermutations[0] = swapper(0, 1);
 
-        T[] permutatedArray = cloneMyArray();
-
-        return permutatedArray;
-
+        return arrayOfPermutations;
     }
+    
+    
 
     public Permutation swapper(int i, int n) {
         Permutation swappedPerm = new Permutation(myArray);
