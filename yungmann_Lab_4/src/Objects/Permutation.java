@@ -115,6 +115,20 @@ public class Permutation<T> {
 
     }
 
+    public T[] swapper(int i, int n) {
+        T[] swappedArray = cloneMyArray();
+
+        T elementTemp;
+
+        elementTemp = swappedArray[i];
+
+        swappedArray[i] = swappedArray[n];
+
+        swappedArray[n] = elementTemp;
+
+        return swappedArray;
+    }
+
     public T[] getMyArray() {
         return myArray;
     }
