@@ -115,18 +115,18 @@ public class Permutation<T> {
 
     }
 
-    public T[] swapper(int i, int n) {
-        T[] swappedArray = cloneMyArray();
+    public Permutation swapper(int i, int n) {
+        Permutation swappedPerm = new Permutation(myArray);
 
         T elementTemp;
 
-        elementTemp = swappedArray[i];
+        elementTemp = (T) swappedPerm.getMyArray()[i];
 
-        swappedArray[i] = swappedArray[n];
+        swappedPerm.getMyArray()[i] = (T) swappedPerm.getMyArray()[n];
 
-        swappedArray[n] = elementTemp;
+        swappedPerm.getMyArray()[n] = elementTemp;
 
-        return swappedArray;
+        return swappedPerm;
     }
 
     public T[] getMyArray() {
