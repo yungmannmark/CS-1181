@@ -127,9 +127,16 @@ public class Permutation<T> {
         return factorial;
     }
 
-    public Permutation[] permutator(int i, int n) {
-        Permutation[] arrayOfPermutations = new Permutation[1];
+    public Permutation[] permutator() {
+        Permutation[] arrayOfPermutations = new Permutation[calculatePermutations()];
+        int permutationCounter = 0;
 
+        for (int i = 0; i < myArray.length; i++) {
+            for (int n = 0; n < myArray.length; n++) {
+                arrayOfPermutations[permutationCounter] = swapper(i, n);
+                permutationCounter++;
+            }
+        }
         arrayOfPermutations[0] = swapper(0, 1);
 
         return arrayOfPermutations;
