@@ -17,11 +17,10 @@ public class Driver {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Permutation myPerm = new Permutation(3);
+        Permutation myPerm = new Permutation(4);
         
         System.out.println(myPerm.toString());
         
-        //Does not currently work
         myPerm.calculatePermutations();
     }
     

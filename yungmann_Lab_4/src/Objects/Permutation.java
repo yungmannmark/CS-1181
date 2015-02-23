@@ -107,13 +107,12 @@ public class Permutation<T> {
 
     } //End Generic array constructor
 
-    //Currently not functioning
     public int calculatePermutations() {
         int elementCount = myArray.length;
-        int factorial = 0;
+        int factorial = elementCount;
 
-        for (int i = elementCount; i > 0; i--) {
-            factorial += elementCount * (elementCount - 1);
+        for (int i = (elementCount - 1); i > 0; i--) {
+            factorial *= i;
         }
 
         System.out.println(factorial);
