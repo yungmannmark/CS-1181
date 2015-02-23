@@ -115,8 +115,6 @@ public class Permutation<T> {
             factorial *= i;
         }
 
-        System.out.println(factorial);
-
         return factorial;
     }
 
