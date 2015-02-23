@@ -21,7 +21,7 @@ public class Driver {
         
         System.out.println(myPerm.toString());
         
-        myPerm.calculatePermutations();
+        System.out.println("Number of permutations: " + myPerm.calculatePermutations());
     }
     
 }

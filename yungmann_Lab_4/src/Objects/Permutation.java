@@ -107,11 +107,20 @@ public class Permutation<T> {
 
     } //End Generic array constructor
 
+    /**
+     * Calculates the number of permutations may be created from element set
+     * myArray.
+     * <p>
+     * PreCondition: myArray must have been initialized.
+     * <p>
+     * PostCondition: The number of possible permutations is returned
+     *
+     * @return factorial, containing the result of myArray.length factorial
+     */
     public int calculatePermutations() {
-        int elementCount = myArray.length;
-        int factorial = elementCount;
+        int factorial = myArray.length;
 
-        for (int i = (elementCount - 1); i > 0; i--) {
+        for (int i = (myArray.length - 1); i > 0; i--) {
             factorial *= i;
         }
 
