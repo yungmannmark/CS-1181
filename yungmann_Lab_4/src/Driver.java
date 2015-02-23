@@ -20,6 +20,9 @@ public class Driver {
         Permutation myPerm = new Permutation(3);
         
         System.out.println(myPerm.toString());
+        
+        //Does not currently work
+        myPerm.calculatePermutations();
     }
     
 }

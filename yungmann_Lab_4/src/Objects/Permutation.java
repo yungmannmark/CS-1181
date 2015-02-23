@@ -107,15 +107,27 @@ public class Permutation<T> {
 
     } //End Generic array constructor
 
-    public Permutation [] permutator(int i, int n) {
-        Permutation [] arrayOfPermutations = new Permutation [1];
-        
+    //Currently not functioning
+    public int calculatePermutations() {
+        int elementCount = myArray.length;
+        int factorial = 0;
+
+        for (int i = elementCount; i > 0; i--) {
+            factorial += elementCount * (elementCount - 1);
+        }
+
+        System.out.println(factorial);
+
+        return factorial;
+    }
+
+    public Permutation[] permutator(int i, int n) {
+        Permutation[] arrayOfPermutations = new Permutation[1];
+
         arrayOfPermutations[0] = swapper(0, 1);
 
         return arrayOfPermutations;
     }
-    
-    
 
     public Permutation swapper(int i, int n) {
         Permutation swappedPerm = new Permutation(myArray);
